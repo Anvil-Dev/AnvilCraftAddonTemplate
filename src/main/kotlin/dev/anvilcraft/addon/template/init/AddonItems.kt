@@ -12,7 +12,7 @@ class AddonItems {
         }
 
         val EXAMPLE_ITEM: ItemEntry<Item> = REGISTRATE
-            .item("example_item") { properties: Item.Properties -> Item(properties) }
+            .item("example_item") { Item(it) }
             .register()
 
         fun register() {

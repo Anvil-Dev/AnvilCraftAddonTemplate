@@ -15,11 +15,8 @@ class AnvilCraftAddonTemplateClient(modBus: IEventBus, container: ModContainer) 
     init {
         container.registerExtensionPoint<IConfigScreenFactory>(
             IConfigScreenFactory::class.java,
-            IConfigScreenFactory { _: ModContainer, s: Screen ->
-                AutoConfig.getConfigScreen<AddonConfig>(
-                    AddonConfig::class.java,
-                    s
-                ).get()
+            IConfigScreenFactory { _, s ->
+                AutoConfig.getConfigScreen<AddonConfig>(AddonConfig::class.java, s).get()
             }
         )
     }

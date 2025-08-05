@@ -3,7 +3,6 @@ package dev.anvilcraft.addon.template.init
 import com.tterrag.registrate.util.entry.BlockEntry
 import dev.anvilcraft.addon.template.AnvilCraftAddonTemplate.Companion.REGISTRATE
 import net.minecraft.world.level.block.Block
-import net.minecraft.world.level.block.state.BlockBehaviour
 
 class AddonBlocks {
     @Suppress("NULLABILITY_MISMATCH_BASED_ON_JAVA_ANNOTATIONS")
@@ -13,7 +12,7 @@ class AddonBlocks {
         }
 
         val EXAMPLE_BLOCK: BlockEntry<Block> = REGISTRATE
-            .block("example_block") { properties: BlockBehaviour.Properties -> Block(properties) }
+            .block("example_block") { Block(it) }
             .simpleItem()
             .register()
 

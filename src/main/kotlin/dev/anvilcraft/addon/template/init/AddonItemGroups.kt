@@ -23,7 +23,7 @@ class AddonItemGroups {
                 Supplier {
                     CreativeModeTab.builder()
                         .icon { AddonItems.EXAMPLE_ITEM.asStack() }
-                        .displayItems { _: ItemDisplayParameters, _: CreativeModeTab.Output -> }
+                        .displayItems { _, _ -> }
                         .title(
                             AnvilCraftAddonTemplate.REGISTRATE.addLang(
                                 "itemGroup",

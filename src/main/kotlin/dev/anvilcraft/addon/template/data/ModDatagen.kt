@@ -22,11 +22,10 @@ class ModDatagen {
          */
         fun init() {
             AnvilCraftAddonTemplate.REGISTRATE.addDataGenerator(
-                ProviderType.LANG,
-                NonNullConsumer { provider: RegistrateLangProvider ->
-                    LangHandler.init(provider)
-                }
-            )
+                ProviderType.LANG
+            ) {
+                LangHandler.init(it)
+            }
         }
     }
 }
