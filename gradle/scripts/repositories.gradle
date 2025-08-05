@@ -1,6 +1,11 @@
 repositories {
     mavenLocal()
     mavenCentral()
+    maven {
+        name = 'Kotlin for Forge'
+        url = 'https://thedarkcolour.github.io/KotlinForForge/'
+        content { includeGroup "thedarkcolour" }
+    }
     maven { // Anvil Lib
         name = "Cjsah Maven"
         url = "https://server.cjsah.net:1002/maven/"

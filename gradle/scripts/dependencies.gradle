@@ -1,4 +1,7 @@
 dependencies {
+    // Kotlin for Forge
+    implementation(libs.kotlinforforge)
+
     // Registrate
     api(libs.registrate)
 
