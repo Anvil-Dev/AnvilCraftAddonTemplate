@@ -12,10 +12,8 @@ class AddonBlocks {
             REGISTRATE.defaultCreativeTab(AddonItemGroups.ADDON_ITEMS.key)
         }
 
-        val EXAMPLE_BLOCK: BlockEntry<Block?> = REGISTRATE
-            .block<Block?>(
-                "example_block"
-            ) { properties: BlockBehaviour.Properties -> Block(properties) }
+        val EXAMPLE_BLOCK: BlockEntry<Block> = REGISTRATE
+            .block("example_block") { properties: BlockBehaviour.Properties -> Block(properties) }
             .simpleItem()
             .register()
 

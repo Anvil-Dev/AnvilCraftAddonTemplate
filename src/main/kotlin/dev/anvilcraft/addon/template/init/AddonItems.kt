@@ -11,8 +11,8 @@ class AddonItems {
             REGISTRATE.defaultCreativeTab(AddonItemGroups.ADDON_ITEMS.key)
         }
 
-        val EXAMPLE_ITEM: ItemEntry<Item?> = REGISTRATE
-            .item<Item?>("example_item") { properties: Item.Properties -> Item(properties) }
+        val EXAMPLE_ITEM: ItemEntry<Item> = REGISTRATE
+            .item("example_item") { properties: Item.Properties -> Item(properties) }
             .register()
 
         fun register() {

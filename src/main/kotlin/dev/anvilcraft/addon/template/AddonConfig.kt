@@ -16,7 +16,7 @@ class AddonConfig : ConfigData {
     @Comment("A magic number")
     @ConfigEntry.Gui.Tooltip
     @BoundedDiscrete(max = 24, min = 2)
-    var magicNumber: Int = 0
+    var magicNumber: Int = 2
 
     @Comment("What you want the introduction message to be for the magic number")
     @ConfigEntry.Gui.Tooltip
