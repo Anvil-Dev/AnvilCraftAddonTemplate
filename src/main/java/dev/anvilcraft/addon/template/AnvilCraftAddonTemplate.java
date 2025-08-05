@@ -22,7 +22,7 @@ public class AnvilCraftAddonTemplate {
     public static AddonConfig config = AutoConfig.register(AddonConfig.class, JanksonConfigSerializer::new).getConfig();
     public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
 
-    public AnvilCraftAddonTemplate(IEventBus modEventBus, ModContainer modContainer) {
+    public AnvilCraftAddonTemplate(@NotNull IEventBus modEventBus, @NotNull ModContainer modContainer) {
         AddonItemGroups.register(modEventBus);
         AddonBlocks.register();
         AddonItems.register();
