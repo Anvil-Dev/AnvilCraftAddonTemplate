@@ -6,6 +6,8 @@ neoForge {
         minecraftVersion = project.parchment_minecraft_version
     }
 
+    var isJbr = System.getProperty('java.vm.vendor').contains('JetBrains')
+
     runs {
         client {
             client()
@@ -29,6 +31,10 @@ neoForge {
         }
 
         configureEach {
+            if (isJbr) {
+                jvmArgument "-XX:+AllowEnhancedClassRedefinition"
+            }
+            programArguments.addAll "--width", "1440", "--height", "841"
             systemProperty 'forge.logging.markers', 'REGISTRIES'
             logLevel = org.slf4j.event.Level.DEBUG
         }
