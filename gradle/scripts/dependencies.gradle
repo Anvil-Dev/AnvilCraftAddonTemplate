@@ -13,4 +13,15 @@ dependencies {
 
     // Curios API
     implementation(libs.curios)
+
+    // JEI
+    compileOnlyApi(libs.jeiCommonApi) { transitive = false }
+    compileOnlyApi(libs.jeiForgeApi) { transitive = false }
+    implementation(libs.jeiForgeImpl) { transitive = false }
+
+    // Jade
+    implementation(libs.jade)
+
+    // Patchouli
+    implementation(libs.patchouli)
 }
