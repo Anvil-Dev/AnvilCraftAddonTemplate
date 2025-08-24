@@ -1,10 +1,9 @@
 package dev.anvilcraft.addon.template.init
 
 import dev.anvilcraft.addon.template.AnvilCraftAddonTemplate
-import dev.dubhe.anvilcraft.init.ModItemGroups
+import dev.dubhe.anvilcraft.init.item.ModItemGroups
 import net.minecraft.core.registries.Registries
 import net.minecraft.world.item.CreativeModeTab
-import net.minecraft.world.item.CreativeModeTab.ItemDisplayParameters
 import net.neoforged.bus.api.IEventBus
 import net.neoforged.neoforge.registries.DeferredHolder
 import net.neoforged.neoforge.registries.DeferredRegister
