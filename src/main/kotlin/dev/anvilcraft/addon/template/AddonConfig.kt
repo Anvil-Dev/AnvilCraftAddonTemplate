@@ -1,28 +1,22 @@
 package dev.anvilcraft.addon.template
 
-import me.shedaniel.autoconfig.ConfigData
-import me.shedaniel.autoconfig.annotation.Config
-import me.shedaniel.autoconfig.annotation.ConfigEntry
-import me.shedaniel.autoconfig.annotation.ConfigEntry.BoundedDiscrete
-import me.shedaniel.cloth.clothconfig.shadowed.blue.endless.jankson.Comment
+import dev.anvilcraft.lib.config.BoundedDiscrete
+import dev.anvilcraft.lib.config.Comment
+import dev.anvilcraft.lib.config.Config
 import net.minecraft.world.item.Item
 
 @Config(name = AnvilCraftAddonTemplate.MOD_ID)
-class AddonConfig : ConfigData {
+class AddonConfig {
     @Comment("Whether to log the dirt block on common setup")
-    @ConfigEntry.Gui.Tooltip
     var logDirtBlock: Boolean = false
 
     @Comment("A magic number")
-    @ConfigEntry.Gui.Tooltip
-    @BoundedDiscrete(max = 24, min = 2)
+    @BoundedDiscrete(max = 24.0, min = 2.0)
     var magicNumber: Int = 2
 
     @Comment("What you want the introduction message to be for the magic number")
-    @ConfigEntry.Gui.Tooltip
     var magicNumberIntroduction: String = ""
 
     @Comment("A list of items to log on common setup.")
-    @ConfigEntry.Gui.Tooltip
     var items: MutableSet<Item> = mutableSetOf()
 }

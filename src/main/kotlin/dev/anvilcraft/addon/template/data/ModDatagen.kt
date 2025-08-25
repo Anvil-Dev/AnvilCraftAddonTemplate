@@ -1,8 +1,6 @@
 package dev.anvilcraft.addon.template.data
 
 import com.tterrag.registrate.providers.ProviderType
-import com.tterrag.registrate.providers.RegistrateLangProvider
-import com.tterrag.registrate.util.nullness.NonNullConsumer
 import dev.anvilcraft.addon.template.AnvilCraftAddonTemplate
 import dev.anvilcraft.addon.template.data.lang.LangHandler
 import net.neoforged.bus.api.SubscribeEvent
@@ -21,11 +19,7 @@ class ModDatagen {
          * 初始化生成器
          */
         fun init() {
-            AnvilCraftAddonTemplate.REGISTRATE.addDataGenerator(
-                ProviderType.LANG
-            ) {
-                LangHandler.init(it)
-            }
+            AnvilCraftAddonTemplate.REGISTRATE.addDataGenerator(ProviderType.LANG,LangHandler::init)
         }
     }
 }

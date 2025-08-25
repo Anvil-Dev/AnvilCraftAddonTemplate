@@ -1,6 +1,8 @@
 package dev.anvilcraft.addon.template.data.lang
 
 import com.tterrag.registrate.providers.RegistrateLangProvider
+import dev.anvilcraft.addon.template.AddonConfig
+import dev.anvilcraft.lib.config.ConfigData
 
 class LangHandler {
     companion object {
@@ -10,7 +12,7 @@ class LangHandler {
          * @param provider 提供器
          */
         fun init(provider: RegistrateLangProvider) {
-            ConfigScreenLang.init(provider)
+            ConfigData.readConfigClass(provider, AddonConfig::class.java)
         }
     }
 }
