@@ -10,6 +10,5 @@ import org.jetbrains.annotations.NotNull;
 @Mod(value = AnvilCraftAddonTemplate.MOD_ID, dist = Dist.CLIENT)
 public class AnvilCraftAddonTemplateClient {
     public AnvilCraftAddonTemplateClient(@NotNull IEventBus modBus, @NotNull ModContainer container) {
-        AnvilCraftAddonTemplate.CONFIG_MANAGER.registerScreen(container);
     }
 }
