@@ -6,8 +6,7 @@ import dev.anvilcraft.addon.template.data.ModDatagen;
 import dev.anvilcraft.addon.template.init.AddonBlocks;
 import dev.anvilcraft.addon.template.init.AddonItemGroups;
 import dev.anvilcraft.addon.template.init.AddonItems;
-import me.shedaniel.autoconfig.AutoConfig;
-import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
+import dev.anvilcraft.lib.config.ConfigManager;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -19,7 +18,8 @@ import org.slf4j.Logger;
 public class AnvilCraftAddonTemplate {
     public static final String MOD_ID = "anvilcraft_addon_template";
     public static final Logger LOGGER = LogUtils.getLogger();
-    public static AddonConfig config = AutoConfig.register(AddonConfig.class, JanksonConfigSerializer::new).getConfig();
+    public static final ConfigManager CONFIG_MANAGER = new ConfigManager();
+    public static final AddonConfig CONFIG = CONFIG_MANAGER.register(new AddonConfig());
     public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
 
     public AnvilCraftAddonTemplate(@NotNull IEventBus modEventBus, @NotNull ModContainer modContainer) {
