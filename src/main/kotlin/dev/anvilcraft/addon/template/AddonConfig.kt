@@ -3,7 +3,6 @@ package dev.anvilcraft.addon.template
 import dev.anvilcraft.lib.config.BoundedDiscrete
 import dev.anvilcraft.lib.config.Comment
 import dev.anvilcraft.lib.config.Config
-import net.minecraft.world.item.Item
 
 @Config(name = AnvilCraftAddonTemplate.MOD_ID)
 class AddonConfig {
@@ -16,7 +15,4 @@ class AddonConfig {
 
     @Comment("What you want the introduction message to be for the magic number")
     var magicNumberIntroduction: String = ""
-
-    @Comment("A list of items to log on common setup.")
-    var items: MutableSet<Item> = mutableSetOf()
 }
