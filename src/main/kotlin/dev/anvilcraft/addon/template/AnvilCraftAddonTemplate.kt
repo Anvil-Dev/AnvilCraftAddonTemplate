@@ -19,7 +19,7 @@ class AnvilCraftAddonTemplate(modEventBus: IEventBus, modContainer: ModContainer
     companion object {
         const val MOD_ID: String = "anvilcraft_addon_template"
         val LOGGER: Logger = LogUtils.getLogger()
-        val CONFIG: AddonConfig = ConfigManager.register { return@register AddonConfig() }
+        val CONFIG: AddonConfig = ConfigManager.register(MOD_ID) { return@register AddonConfig() }
         val REGISTRATE: Registrate = Registrate.create(MOD_ID)
 
         @NotNull
