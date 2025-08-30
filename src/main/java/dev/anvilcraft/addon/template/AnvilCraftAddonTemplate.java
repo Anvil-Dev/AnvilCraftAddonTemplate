@@ -18,7 +18,7 @@ import org.slf4j.Logger;
 public class AnvilCraftAddonTemplate {
     public static final String MOD_ID = "anvilcraft_addon_template";
     public static final Logger LOGGER = LogUtils.getLogger();
-    public static final AddonConfig CONFIG = ConfigManager.register(AddonConfig::new);
+    public static final AddonConfig CONFIG = ConfigManager.register(AnvilCraftAddonTemplate.MOD_ID, AddonConfig::new);
     public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
 
     public AnvilCraftAddonTemplate(@NotNull IEventBus modEventBus, @NotNull ModContainer modContainer) {

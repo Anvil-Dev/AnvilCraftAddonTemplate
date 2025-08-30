@@ -19,7 +19,4 @@ public class AddonConfig {
 
     @Comment("What you want the introduction message to be for the magic number")
     public String magicNumberIntroduction = "";
-
-    @Comment("A list of items to log on common setup.")
-    public Set<Item> items = HashSet.newHashSet(1);
 }

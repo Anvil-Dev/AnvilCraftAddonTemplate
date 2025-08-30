@@ -1,6 +1,4 @@
 {
-  "anvilcraft_addon_template.configuration.items": "Items",
-  "anvilcraft_addon_template.configuration.items.tooltip": "A list of items to log on common setup.",
   "anvilcraft_addon_template.configuration.log_dirt_block": "Log Dirt Block",
   "anvilcraft_addon_template.configuration.log_dirt_block.tooltip": "Whether to log the dirt block on common setup",
   "anvilcraft_addon_template.configuration.magic_number": "Magic Number",
