@@ -5,18 +5,10 @@ tasks.register('sourcesJar', Jar) {
 }
 
 jar {
-    from(project.file("LICENSE")) {
-        rename { "${it}_${mod_id}" }
-    }
-    from(project.file("ASSETS_LICENSE")) {
-        rename { "${it}_${mod_id}" }
-    }
-    from(project.file("README.md")) {
-        rename { "${it}_${mod_id}" }
-    }
-    from(project.file("README_en.md")) {
-        rename { "${it}_${mod_id}" }
-    }
+    from(project.file("LICENSE"))
+    from(project.file("ASSETS_LICENSE"))
+    from(project.file("README.md"))
+    from(project.file("README_en.md"))
 }
 
 base {
