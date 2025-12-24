@@ -2,7 +2,7 @@ package dev.anvilcraft.addon.template
 
 import com.mojang.logging.LogUtils
 import com.tterrag.registrate.Registrate
-import dev.anvilcraft.addon.template.data.ModDatagen
+import dev.anvilcraft.addon.template.data.AddonDatagen
 import dev.anvilcraft.addon.template.init.AddonBlocks
 import dev.anvilcraft.addon.template.init.AddonItemGroups
 import dev.anvilcraft.addon.template.init.AddonItems
@@ -32,6 +32,6 @@ class AnvilCraftAddonTemplate(modEventBus: IEventBus, modContainer: ModContainer
         AddonItemGroups.register(modEventBus)
         AddonBlocks.register()
         AddonItems.register()
-        ModDatagen.init()
+        AddonDatagen.init()
     }
 }

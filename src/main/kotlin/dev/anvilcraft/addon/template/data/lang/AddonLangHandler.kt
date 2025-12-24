@@ -4,7 +4,7 @@ import com.tterrag.registrate.providers.RegistrateLangProvider
 import dev.anvilcraft.addon.template.AddonConfig
 import dev.anvilcraft.lib.config.ConfigData
 
-class LangHandler {
+class AddonLangHandler {
     companion object {
         /**
          * 语言文件初始化
