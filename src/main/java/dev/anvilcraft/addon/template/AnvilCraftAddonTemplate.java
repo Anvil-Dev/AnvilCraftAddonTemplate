@@ -11,7 +11,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
-import org.jetbrains.annotations.NotNull;
 import org.slf4j.Logger;
 
 @Mod(AnvilCraftAddonTemplate.MOD_ID)
@@ -21,14 +20,14 @@ public class AnvilCraftAddonTemplate {
     public static final AddonConfig CONFIG = ConfigManager.register(AnvilCraftAddonTemplate.MOD_ID, AddonConfig::new);
     public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
 
-    public AnvilCraftAddonTemplate(@NotNull IEventBus modEventBus, @NotNull ModContainer modContainer) {
+    public AnvilCraftAddonTemplate(IEventBus modEventBus, ModContainer modContainer) {
         AddonItemGroups.register(modEventBus);
         AddonBlocks.register();
         AddonItems.register();
         AddonDatagen.init();
     }
 
-    public static @NotNull ResourceLocation of(String path) {
+    public static ResourceLocation of(String path) {
         return ResourceLocation.fromNamespaceAndPath(MOD_ID, path);
     }
 }
