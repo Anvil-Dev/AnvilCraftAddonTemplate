@@ -16,8 +16,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CI_BUILD: true
-      PR_BUILD: true
+      BUILD_TYPE: pr
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -61,4 +60,6 @@ jobs:
         uses: Anvil-Dev/dedicated-server-launch-test@1.21.1-neoforge
         with:
           mod: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
-          extra-mods: anvilcraft:1.21.1-1.5.0+hotfix.1572
+          extra-mods: |
+            anvilcraft:1.21.1-1.5.0+hotfix.1572
+            kotlin-for-forge:5.10.0
