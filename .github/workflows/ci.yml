@@ -4,12 +4,12 @@ on:
   push:
     branches:
       - releases/**
+      - dev/**
     paths:
       - src/**
-      - common/**
-      - fabric/**
-      - forge/**
+      - gradle/**
       - build.gradle
+      - dependencies.gradle
       - gradle.properties
       - settings.gradle
 
@@ -17,8 +17,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      CI_BUILD: true
-      PR_BUILD: false
+      BUILD_TYPE: snapshot
+      VERSION_TYPE: release
     steps:
       - name: checkout
         uses: actions/checkout@v4
