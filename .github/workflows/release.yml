@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       BUILD_TYPE: release
-      VERSION_TYPE: ${{ github.event.release.prerelease && 'alpha' || 'release' }}
+      VERSION_TYPE: ${{ github.event.release.prerelease && 'beta' || 'release' }}
     steps:
       - name: checkout
         uses: actions/checkout@v4
@@ -84,6 +84,9 @@ jobs:
 
           curseforge-id: ${{ steps.properties.outputs.curseforge_id }}
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+
+          dependencies: |
+            anvilcraft@1.21.1-1.5.0(required){modrinth:vuISAWPc}{curseforge:986251}
 
           files: |
             build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
