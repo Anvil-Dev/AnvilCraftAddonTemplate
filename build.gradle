@@ -4,6 +4,7 @@ plugins {
     id 'idea'
     alias libs.plugins.modDevGradle
     alias libs.plugins.lombok
+    id "org.jetbrains.kotlin.plugin.lombok" version '2.1.21'
 }
 
 String buildType
@@ -49,4 +50,10 @@ idea {
 
 lombok {
     version = "1.18.34"
+}
+repositories {
+    mavenCentral()
+}
+dependencies {
+    testImplementation 'org.jetbrains.kotlin:kotlin-test'
 }

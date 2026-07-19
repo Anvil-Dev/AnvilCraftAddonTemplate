@@ -1,8 +1,8 @@
 package dev.anvilcraft.addon.template.data.lang
 
-import com.tterrag.registrate.providers.RegistrateLangProvider
 import dev.anvilcraft.addon.template.AddonConfig
-import dev.anvilcraft.lib.config.ConfigData
+import dev.anvilcraft.lib.v2.config.ConfigData
+import dev.anvilcraft.lib.v2.registrum.providers.RegistrumLangProvider
 
 class AddonLangHandler {
     companion object {
@@ -11,7 +11,7 @@ class AddonLangHandler {
          *
          * @param provider 提供器
          */
-        fun init(provider: RegistrateLangProvider) {
+        fun init(provider: RegistrumLangProvider) {
             ConfigData.readConfigClass(provider, AddonConfig::class.java)
         }
     }

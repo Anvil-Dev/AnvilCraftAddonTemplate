@@ -24,7 +24,7 @@ class AddonItemGroups {
                         .icon { AddonItems.EXAMPLE_ITEM.asStack() }
                         .displayItems { _, _ -> }
                         .title(
-                            AnvilCraftAddonTemplate.REGISTRATE.addLang(
+                            AnvilCraftAddonTemplate.REGISTRUM.addLang(
                                 "itemGroup",
                                 AnvilCraftAddonTemplate.of("addon_items"),
                                 "AnvilCraft: Addon Template"
