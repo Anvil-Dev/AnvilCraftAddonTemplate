@@ -1,12 +1,8 @@
 package dev.anvilcraft.addon.template;
 
-import dev.anvilcraft.lib.config.BoundedDiscrete;
-import dev.anvilcraft.lib.config.Comment;
-import dev.anvilcraft.lib.config.Config;
-import net.minecraft.world.item.Item;
-
-import java.util.HashSet;
-import java.util.Set;
+import dev.anvilcraft.lib.v2.config.BoundedDiscrete;
+import dev.anvilcraft.lib.v2.config.Comment;
+import dev.anvilcraft.lib.v2.config.Config;
 
 @Config(name = AnvilCraftAddonTemplate.MOD_ID)
 public class AddonConfig {

@@ -1,12 +1,12 @@
 package dev.anvilcraft.addon.template;
 
 import com.mojang.logging.LogUtils;
-import com.tterrag.registrate.Registrate;
 import dev.anvilcraft.addon.template.data.AddonDatagen;
 import dev.anvilcraft.addon.template.init.AddonBlocks;
 import dev.anvilcraft.addon.template.init.AddonItemGroups;
 import dev.anvilcraft.addon.template.init.AddonItems;
-import dev.anvilcraft.lib.config.ConfigManager;
+import dev.anvilcraft.lib.v2.config.ConfigManager;
+import dev.anvilcraft.lib.v2.registrum.Registrum;
 import net.minecraft.resources.ResourceLocation;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.fml.ModContainer;
@@ -18,7 +18,7 @@ public class AnvilCraftAddonTemplate {
     public static final String MOD_ID = "anvilcraft_addon_template";
     public static final Logger LOGGER = LogUtils.getLogger();
     public static final AddonConfig CONFIG = ConfigManager.register(AnvilCraftAddonTemplate.MOD_ID, AddonConfig::new);
-    public static final Registrate REGISTRATE = Registrate.create(MOD_ID);
+    public static final Registrum REGISTRUM = Registrum.create(MOD_ID);
 
     public AnvilCraftAddonTemplate(IEventBus modEventBus, ModContainer modContainer) {
         AddonItemGroups.register(modEventBus);

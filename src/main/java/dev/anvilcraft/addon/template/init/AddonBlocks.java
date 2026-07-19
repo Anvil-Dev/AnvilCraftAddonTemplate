@@ -1,16 +1,16 @@
 package dev.anvilcraft.addon.template.init;
 
-import com.tterrag.registrate.util.entry.BlockEntry;
+import dev.anvilcraft.lib.v2.registrum.util.entry.BlockEntry;
 import net.minecraft.world.level.block.Block;
 
-import static dev.anvilcraft.addon.template.AnvilCraftAddonTemplate.REGISTRATE;
+import static dev.anvilcraft.addon.template.AnvilCraftAddonTemplate.REGISTRUM;
 
 public class AddonBlocks {
     static {
-        REGISTRATE.defaultCreativeTab(AddonItemGroups.ADDON_ITEMS.getKey());
+        REGISTRUM.defaultCreativeTab(AddonItemGroups.ADDON_ITEMS.getKey());
     }
 
-    public static final BlockEntry<Block> EXAMPLE_BLOCK = REGISTRATE
+    public static final BlockEntry<Block> EXAMPLE_BLOCK = REGISTRUM
         .block("example_block", Block::new)
         .simpleItem()
         .register();

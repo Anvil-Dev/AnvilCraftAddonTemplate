@@ -8,7 +8,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static dev.anvilcraft.addon.template.AnvilCraftAddonTemplate.REGISTRATE;
+import static dev.anvilcraft.addon.template.AnvilCraftAddonTemplate.REGISTRUM;
 
 
 public class AddonItemGroups {
@@ -24,7 +24,7 @@ public class AddonItemGroups {
             .displayItems((ctx, entries) -> {
             })
             .title(
-                REGISTRATE.addLang(
+                REGISTRUM.addLang(
                     "itemGroup",
                     AnvilCraftAddonTemplate.of("addon_items"),
                     "AnvilCraft: Addon Template"
