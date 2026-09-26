@@ -1,11 +1,9 @@
 dependencies {
-    // Kotlin for Forge
     implementation(libs.kotlinforforge)
-
-    // Anvil Lib
-    implementation(libs.anvillib)
-
-    // AnvilCraft
+    api(libs.anvillib)
+    interfaceInjectionData(libs.anvillibRecipe)
+    interfaceInjectionData(libs.anvillibMoveableEntityBlock)
+    api(libs.ageratum)
     implementation(libs.anvilcraft) { transitive = false }
     interfaceInjectionData(libs.anvilcraft) { transitive = false }
 }
