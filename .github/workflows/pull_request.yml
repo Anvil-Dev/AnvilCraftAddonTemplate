@@ -34,6 +34,17 @@ jobs:
           distribution: zulu
           java-version: ${{ steps.properties.outputs.java_version }}
 
+      - name: Read Versions
+        id: versions
+        uses: Gu-ZT/toml-reader-action@1.0.0
+        with:
+          file: gradle/libs.versions.toml
+          fields: |
+            versions.minecraft
+            versions.neoforge
+            versions.anvilcraft
+            versions.kotlinforforge
+
       - name: make gradle wrapper executable
         if: ${{ runner.os != 'Windows' }}
         run: chmod +x ./gradlew
@@ -57,9 +68,13 @@ jobs:
           path: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
 
       - name: gametest
-        uses: Anvil-Dev/dedicated-server-launch-test@1.21.1-neoforge
+      - uses: Anvil-Dev/dedicated-server-launch-test@universal
+      - continue-on-error: false
         with:
-          mod: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
+          mod_loader: neoforge
+          loader_version: ${{ steps.versions.outputs.versions_neoforge }}
+          mods: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
           extra-mods: |
-            anvilcraft:1.21.1-1.5.0+hotfix.1572
-            kotlin-for-forge:5.10.0
+            anvilcraft:${{ steps.versions.outputs.versions_anvilcraft }}
+            kotlin-for-forge:${{ steps.versions.outputs.versions_kotlinforforge }}
+
