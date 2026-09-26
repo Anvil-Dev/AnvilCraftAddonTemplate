@@ -78,8 +78,8 @@ jobs:
         continue-on-error: true
 
       - name: gametest
-      - uses: Anvil-Dev/dedicated-server-launch-test@universal
-      - continue-on-error: false
+        uses: Anvil-Dev/dedicated-server-launch-test@universal
+        continue-on-error: false
         with:
           mod_loader: neoforge
           loader_version: ${{ steps.versions.outputs.versions_neoforge }}
