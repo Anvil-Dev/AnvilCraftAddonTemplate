@@ -85,6 +85,9 @@ jobs:
           mod_loader: neoforge
           loader_version: ${{ steps.versions.outputs.versions_neoforge }}
           mods: build/libs/${{ steps.properties.outputs.mod_id }}-neoforge-${{ steps.version.outputs.version }}.jar
-          extra-mods: |
-            anvilcraft:${{ steps.versions.outputs.versions_anvilcraft }}
-            kotlin-for-forge:${{ steps.versions.outputs.versions_kotlinforforge }}
+          maven-repos: |
+            https://server.cjsah.net:1002/maven/releases/
+            https://thedarkcolour.github.io/KotlinForForge/
+          maven-mods: |
+            thedarkcolour:kotlinforforge-neoforge:${{ steps.versions.outputs.versions_kotlinforforge }}
+            dev.dubhe:anvilcraft-neoforge-1.21.1:${{ steps.versions.outputs.versions_anvilcraft }}
